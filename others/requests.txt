@@ -1,0 +1,20 @@
+######################################################################
+
+Write an SQL query that will return 10 orders sorted by their creation date (OrderDate) in descending order.
+Output fields: OrderID, OrderDate, CustomerName (customer name).
+
+Use w3schools public database (you can also practice here): https://www.w3schools.com/sql/trysql.asp?filename=trysql_op_add
+
+Mandatory code requirement: request for all views, if used, involve JOIN operators. Do not list tables to join separated by commas.
+
+Answer:
+
+0) First, let's define the "key", i.e. the linking element between two separate tables is "CustomerID".
+
+1)
+SELECT Orders.OrderID, Orders.OrderDate, Customers.CustomerName 
+FROM Orders 
+JOIN Customers 
+ON Orders.CustomerID=Customers.CustomerID
+ORDER BY Orders.OrderDate DESC
+LIMIT 10;
