@@ -1,3 +1,3 @@
 SELECT name, age
 FROM person
-WHERE person.address = 'Kazan'
+WHERE person.address = 'Kazan';
